@@ -172,7 +172,8 @@
 /Users/joaobiriba/Documents/Projects/ionicsamples/rolymaden/platforms/android/assets/www/plugins/com.ionic.keyboard/www/keyboard.js \
 /Users/joaobiriba/Documents/Projects/ionicsamples/rolymaden/platforms/android/assets/www/plugins/org.apache.cordova.device/www \
 /Users/joaobiriba/Documents/Projects/ionicsamples/rolymaden/platforms/android/assets/www/plugins/org.apache.cordova.device/www/device.js \
-/Users/joaobiriba/Documents/Projects/ionicsamples/rolymaden/platforms/android/assets/www/templates/browse.html \
+/Users/joaobiriba/Documents/Projects/ionicsamples/rolymaden/platforms/android/assets/www/templates/gallery.html \
+/Users/joaobiriba/Documents/Projects/ionicsamples/rolymaden/platforms/android/assets/www/templates/home.html \
 /Users/joaobiriba/Documents/Projects/ionicsamples/rolymaden/platforms/android/assets/www/templates/login.html \
 /Users/joaobiriba/Documents/Projects/ionicsamples/rolymaden/platforms/android/assets/www/templates/menu.html \
 /Users/joaobiriba/Documents/Projects/ionicsamples/rolymaden/platforms/android/assets/www/templates/playlist.html \
