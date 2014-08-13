@@ -1,20 +1,17 @@
 /Users/joaobiriba/Documents/Projects/ionicsamples/rolymaden/platforms/android/ant-gen/com/ionicframework/starter/R.java \
  : /Users/joaobiriba/Documents/Projects/ionicsamples/rolymaden/platforms/android/res/drawable/icon.png \
 /Users/joaobiriba/Documents/Projects/ionicsamples/rolymaden/platforms/android/res/drawable-hdpi/ic_launcher.png \
-/Users/joaobiriba/Documents/Projects/ionicsamples/rolymaden/platforms/android/res/drawable-hdpi/icon.png \
 /Users/joaobiriba/Documents/Projects/ionicsamples/rolymaden/platforms/android/res/drawable-land-hdpi/screen.png \
 /Users/joaobiriba/Documents/Projects/ionicsamples/rolymaden/platforms/android/res/drawable-land-ldpi/screen.png \
 /Users/joaobiriba/Documents/Projects/ionicsamples/rolymaden/platforms/android/res/drawable-land-mdpi/screen.png \
 /Users/joaobiriba/Documents/Projects/ionicsamples/rolymaden/platforms/android/res/drawable-land-xhdpi/screen.png \
 /Users/joaobiriba/Documents/Projects/ionicsamples/rolymaden/platforms/android/res/drawable-ldpi/icon.png \
 /Users/joaobiriba/Documents/Projects/ionicsamples/rolymaden/platforms/android/res/drawable-mdpi/ic_launcher.png \
-/Users/joaobiriba/Documents/Projects/ionicsamples/rolymaden/platforms/android/res/drawable-mdpi/icon.png \
 /Users/joaobiriba/Documents/Projects/ionicsamples/rolymaden/platforms/android/res/drawable-port-hdpi/screen.png \
 /Users/joaobiriba/Documents/Projects/ionicsamples/rolymaden/platforms/android/res/drawable-port-ldpi/screen.png \
 /Users/joaobiriba/Documents/Projects/ionicsamples/rolymaden/platforms/android/res/drawable-port-mdpi/screen.png \
 /Users/joaobiriba/Documents/Projects/ionicsamples/rolymaden/platforms/android/res/drawable-port-xhdpi/screen.png \
 /Users/joaobiriba/Documents/Projects/ionicsamples/rolymaden/platforms/android/res/drawable-xhdpi/ic_launcher.png \
-/Users/joaobiriba/Documents/Projects/ionicsamples/rolymaden/platforms/android/res/drawable-xhdpi/icon.png \
 /Users/joaobiriba/Documents/Projects/ionicsamples/rolymaden/platforms/android/res/drawable-xxhdpi/ic_launcher.png \
 /Users/joaobiriba/Documents/Projects/ionicsamples/rolymaden/platforms/android/res/drawable-xxxhdpi/ic_launcher.png \
 /Users/joaobiriba/Documents/Projects/ionicsamples/rolymaden/platforms/android/res/values/strings.xml \
