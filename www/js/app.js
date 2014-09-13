@@ -113,11 +113,11 @@ angular.module('starter', ['ionic', 'firebase', 'starter.controllers'])
       }
     })
 
-    .state('app.browse', {
-      url: "/browse",
+    .state('app.events', {
+      url: "/events",
       views: {
         'menuContent' :{
-          templateUrl: "templates/browse.html"
+          templateUrl: "templates/events.html"
         }
       }
     })

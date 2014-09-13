@@ -6,9 +6,11 @@ angular.module('starter.controllers', [])
 
   $rootScope.show("Please wait... Processing");
   $scope.list = [];
+  $scope.eventslist = [];
+
   var bucketListRef = new Firebase($rootScope.baseUrl);
 
-  
+
   bucketListRef.on('value', function(snapshot) {
     var data = snapshot.val();
 
@@ -26,8 +28,17 @@ angular.module('starter.controllers', [])
     } else {
       $scope.noData = false;
     }
+
+    for ( var eventkey in data['eventi']) {
+      if (data['eventi'].hasOwnProperty(eventkey)) {
+          data['eventi'][eventkey].eventkey = eventkey;
+          $scope.eventslist.push(data['eventi'][eventkey]);
+      }
+    }
+
     $rootScope.hide();
   });
+
   // Create the login modal that we will use later
   $ionicModal.fromTemplateUrl('templates/login.html', {
     scope: $scope

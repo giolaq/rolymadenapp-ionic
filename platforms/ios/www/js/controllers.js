@@ -6,9 +6,11 @@ angular.module('starter.controllers', [])
 
   $rootScope.show("Please wait... Processing");
   $scope.list = [];
+  $scope.eventslist = [];
+
   var bucketListRef = new Firebase($rootScope.baseUrl);
 
-  
+
   bucketListRef.on('value', function(snapshot) {
     var data = snapshot.val();
 
@@ -26,6 +28,17 @@ angular.module('starter.controllers', [])
     } else {
       $scope.noData = false;
     }
+
+    for (var key in data) {
+      if (data.hasOwnProperty('eventi')) {
+          $scope.list.push(data['eventi']);
+      }
+    }
+
+
+
+
+
     $rootScope.hide();
   });
   // Create the login modal that we will use later
