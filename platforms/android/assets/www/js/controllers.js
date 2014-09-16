@@ -1,8 +1,43 @@
 angular.module('starter.controllers', [])
 
-.controller('AppCtrl', function($scope, $ionicModal, $timeout) {
+.controller('AppCtrl', function($rootScope, $scope, $window, $ionicModal, $firebase) {
   // Form data for the login modal
   $scope.loginData = {};
+
+  $rootScope.show("Please wait... Processing");
+  $scope.list = [];
+  $scope.eventslist = [];
+
+  var bucketListRef = new Firebase($rootScope.baseUrl);
+
+
+  bucketListRef.on('value', function(snapshot) {
+    var data = snapshot.val();
+
+    $scope.list = [];
+
+    for (var key in data) {
+      if (data.hasOwnProperty(key)) {
+          data[key].key = key;
+          $scope.list.push(data[key]);
+      }
+    }
+
+    if ($scope.list.length == 0) {
+      $scope.noData = true;
+    } else {
+      $scope.noData = false;
+    }
+
+    for ( var eventkey in data['eventi']) {
+      if (data['eventi'].hasOwnProperty(eventkey)) {
+          data['eventi'][eventkey].eventkey = eventkey;
+          $scope.eventslist.push(data['eventi'][eventkey]);
+      }
+    }
+
+    $rootScope.hide();
+  });
 
   // Create the login modal that we will use later
   $ionicModal.fromTemplateUrl('templates/login.html', {
@@ -45,4 +80,12 @@ angular.module('starter.controllers', [])
 })
 
 .controller('PlaylistCtrl', function($scope, $stateParams) {
+})
+
+.controller('AwesomeController', function($scope) {
+    if(typeof analytics !== "undefined") { analytics.trackView("Awesome Controller"); }
+
+    $scope.initEvent = function() {
+        if(typeof analytics !== "undefined") { analytics.debugMode(); analytics.trackEvent("Category", "Action", "Label", 25); }
+    }
 })

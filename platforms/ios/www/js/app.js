@@ -18,6 +18,13 @@ angular.module('starter', ['ionic', 'firebase', 'starter.controllers'])
       StatusBar.styleDefault();
     }
 
+    if(typeof analytics !== "undefined") {
+                analytics.startTrackerWithId("UA-54852470-1");
+            } else {
+                console.log("Google Analytics Unavailable");
+            }
+
+
     $rootScope.userEmail = null;
     $rootScope.baseUrl = 'https://boiling-heat-2242.firebaseio.com/';
     var authRef = new Firebase($rootScope.baseUrl);
@@ -92,20 +99,7 @@ angular.module('starter', ['ionic', 'firebase', 'starter.controllers'])
 
 
   });
-}
-
-var googleanalyticsApp = angular.module('googleanalytics', ['ionic'])
-    .run(function($ionicPlatform, $ionicPopup) {
-        $ionicPlatform.ready(function() {
-            if(typeof analytics !== "undefined") {
-                analytics.startTrackerWithId("UA-54852470-1");
-            } else {
-                console.log("Google Analytics Unavailable");
-            }
-        });
-    });
-
-)
+})
 
 .config(function($stateProvider, $urlRouterProvider) {
   $stateProvider

@@ -160,12 +160,16 @@
 /Users/joaobiriba/Documents/Projects/ionicsamples/rolymaden/platforms/android/assets/www/lib/ionic/scss/ionicons/_ionicons-icons.scss \
 /Users/joaobiriba/Documents/Projects/ionicsamples/rolymaden/platforms/android/assets/www/lib/ionic/scss/ionicons/_ionicons-variables.scss \
 /Users/joaobiriba/Documents/Projects/ionicsamples/rolymaden/platforms/android/assets/www/lib/ionic/scss/ionicons/ionicons.scss \
+/Users/joaobiriba/Documents/Projects/ionicsamples/rolymaden/platforms/android/assets/www/plugins/com.danielcwilson.plugins.googleanalytics \
 /Users/joaobiriba/Documents/Projects/ionicsamples/rolymaden/platforms/android/assets/www/plugins/com.ionic.keyboard \
 /Users/joaobiriba/Documents/Projects/ionicsamples/rolymaden/platforms/android/assets/www/plugins/org.apache.cordova.device \
+/Users/joaobiriba/Documents/Projects/ionicsamples/rolymaden/platforms/android/assets/www/plugins/com.danielcwilson.plugins.googleanalytics/www \
+/Users/joaobiriba/Documents/Projects/ionicsamples/rolymaden/platforms/android/assets/www/plugins/com.danielcwilson.plugins.googleanalytics/www/analytics.js \
 /Users/joaobiriba/Documents/Projects/ionicsamples/rolymaden/platforms/android/assets/www/plugins/com.ionic.keyboard/www \
 /Users/joaobiriba/Documents/Projects/ionicsamples/rolymaden/platforms/android/assets/www/plugins/com.ionic.keyboard/www/keyboard.js \
 /Users/joaobiriba/Documents/Projects/ionicsamples/rolymaden/platforms/android/assets/www/plugins/org.apache.cordova.device/www \
 /Users/joaobiriba/Documents/Projects/ionicsamples/rolymaden/platforms/android/assets/www/plugins/org.apache.cordova.device/www/device.js \
+/Users/joaobiriba/Documents/Projects/ionicsamples/rolymaden/platforms/android/assets/www/templates/events.html \
 /Users/joaobiriba/Documents/Projects/ionicsamples/rolymaden/platforms/android/assets/www/templates/gallery.html \
 /Users/joaobiriba/Documents/Projects/ionicsamples/rolymaden/platforms/android/assets/www/templates/home.html \
 /Users/joaobiriba/Documents/Projects/ionicsamples/rolymaden/platforms/android/assets/www/templates/login.html \

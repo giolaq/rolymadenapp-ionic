@@ -1,0 +1,26 @@
+<ion-view title="Eventi">
+  <ion-nav-buttons side="left">
+    <button menu-toggle="left" class="button button-icon icon ion-navicon"></button>
+  </ion-nav-buttons>
+  <ion-content padding="true" >
+<div class="list card">
+
+
+<div  class="item item-body" ng-repeat="item in eventslist" id="{{item.key}}" >
+
+      {{ item.nome }}
+
+      <p>
+      {{ item.data }}
+      </p>
+
+    <p>
+      <a href="#" class="subdued">{{ item.testo }}</a>
+    </p>
+  </div>
+  </div>
+
+</div>
+
+  </ion-content>
+</ion-view>

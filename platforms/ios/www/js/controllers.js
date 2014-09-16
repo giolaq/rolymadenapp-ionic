@@ -5,8 +5,8 @@ angular.module('starter.controllers', [])
   $scope.loginData = {};
 
   $rootScope.show("Please wait... Processing");
-  $scope.list = [];
-  $scope.eventslist = [];
+  $scope.list = [];
+  $scope.eventslist = [];
 
   var bucketListRef = new Firebase($rootScope.baseUrl);
 
@@ -80,4 +80,12 @@ angular.module('starter.controllers', [])
 })
 
 .controller('PlaylistCtrl', function($scope, $stateParams) {
+})
+
+.controller('AwesomeController', function($scope) {
+    if(typeof analytics !== "undefined") { analytics.trackView("Awesome Controller"); }
+
+    $scope.initEvent = function() {
+        if(typeof analytics !== "undefined") { analytics.trackEvent("Category", "Action", "Label", 25); }
+    }
 })

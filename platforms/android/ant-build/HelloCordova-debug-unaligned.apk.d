@@ -2,3 +2,4 @@
 /Users/joaobiriba/Documents/Projects/ionicsamples/rolymaden/platforms/android/ant-build/HelloCordova.ap_ \
 /Users/joaobiriba/Documents/Projects/ionicsamples/rolymaden/platforms/android/ant-build/classes.dex \
 /Users/joaobiriba/Documents/Projects/ionicsamples/rolymaden/platforms/android/CordovaLib/ant-build/classes.jar \
+/Users/joaobiriba/Documents/Projects/ionicsamples/rolymaden/platforms/android/libs/libGoogleAnalyticsServices.jar \

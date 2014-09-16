@@ -4,9 +4,9 @@
 // 'starter' is the name of this angular module example (also set in a <body> attribute in index.html)
 // the 2nd parameter is an array of 'requires'
 // 'starter.controllers' is found in controllers.js
-angular.module('starter', ['ionic', 'starter.controllers'])
+angular.module('starter', ['ionic', 'firebase', 'starter.controllers'])
 
-.run(function($ionicPlatform) {
+.run(function($ionicPlatform, $rootScope, $firebaseAuth, $firebase, $window, $ionicLoading) {
   $ionicPlatform.ready(function() {
     // Hide the accessory bar by default (remove this to show the accessory bar above the keyboard
     // for form inputs)
@@ -17,6 +17,87 @@ angular.module('starter', ['ionic', 'starter.controllers'])
       // org.apache.cordova.statusbar required
       StatusBar.styleDefault();
     }
+
+    if(typeof analytics !== "undefined") {
+                analytics.startTrackerWithId("UA-54852470-1");
+            } else {
+                console.log("Google Analytics Unavailable");
+            }
+
+
+    $rootScope.userEmail = null;
+    $rootScope.baseUrl = 'https://boiling-heat-2242.firebaseio.com/';
+    var authRef = new Firebase($rootScope.baseUrl);
+    $rootScope.auth = $firebaseAuth(authRef);
+
+     // check session
+
+
+    $rootScope.validateUser = function () {
+        $rootScope.show('Please wait.. Authenticating');
+          var authClient = new FirebaseSimpleLogin(authRef, function(error, user) {
+            if (error !== null) {
+              $rootScope.notify('Login error: ' + error);
+            } else if (user !== null) {
+              $rootScope.notify('User authenticated with Firebase: ' + user);
+            } else {
+              $rootScope.notify('User is logged out');
+
+            }
+          });
+
+        authClient.login('anonymous', {
+           rememberMe: true
+        });
+     }
+
+    $rootScope.show = function(text) {
+      $rootScope.loading = $ionicLoading.show({
+        content: text ? text : 'Loading..',
+        animation: 'fade-in',
+        showBackdrop: true,
+        maxWidth: 200,
+        showDelay: 0
+      });
+    };
+
+    $rootScope.hide = function() {
+      $ionicLoading.hide();
+    };
+
+    $rootScope.notify = function(text) {
+      $rootScope.show(text);
+      $window.setTimeout(function() {
+        $rootScope.hide();
+      }, 1999);
+    };
+
+    $rootScope.logout = function() {
+      $rootScope.auth.$logout();
+      $rootScope.checkSession();
+    };
+
+    $rootScope.checkSession = function() {
+      var auth = new FirebaseSimpleLogin(authRef, function(error, user) {
+        if (error) {
+          // no action yet.. redirect to default route
+          $rootScope.userEmail = null;
+          $window.location.href = '#/app/search';
+        } else if (user) {
+          // user authenticated with Firebase
+        //  $rootScope.userEmail = user.email;
+          $window.location.href = ('#/app/search');
+        } else {
+          // user is logged out
+          $rootScope.userEmail = null;
+          $window.location.href = '#/app/search';
+        }
+      });
+    }
+    $rootScope.validateUser();
+
+
+
   });
 })
 
@@ -39,11 +120,11 @@ angular.module('starter', ['ionic', 'starter.controllers'])
       }
     })
 
-    .state('app.browse', {
-      url: "/browse",
+    .state('app.events', {
+      url: "/events",
       views: {
         'menuContent' :{
-          templateUrl: "templates/browse.html"
+          templateUrl: "templates/events.html"
         }
       }
     })

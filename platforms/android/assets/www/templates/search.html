@@ -14,37 +14,13 @@
 
 <div class="item item-body">
     <img class="full-image" src="img/rolymaden1.jpg">
-    <p>
+    <p ng-repeat="item in list" id="{{item.key}}" >
 
-      Roly Maden nasce il primo marzo 1971 in un piccolo quartiere di l'Havana, con innata passione per la musica e la danza.
-      Oggi vive ed insegna in Italia. La sede della scuola -Roly Maden Style- è a Verona, dove insegna il folklore tipico della grande isola caraibica: salsa, son, mambo, afro rumba e chachachà.
-      Ma la sua attività non si svolge solo nella città veneta, poiché Roly è uno dei maestri più richiesti per stages e spettacoli, sia in Italia che all'estero, per il suo stile personale, pieno di passione e di movimento.
-
-      Roly Maden è un artista completo e lo dimostra cimentandosi come cantante in questo progetto realizzato con Bernardo Izaguirre, in arte Berna Jam, producer, musicista, dj e remixer.
-      TIMBATEATE è un cd composto da tre brani molto diversi tra loro, per andare incontro ai gusti degli appassionati di musica latina, dove si evidenzia la mano collaudata di Berna Jam nella qualità musicale e negli arrangiamenti.
+      {{ item.item }}
     </p>
 
-    <p>
-      <a href="#" class="subdued">1 Like</a>
-      <a href="#" class="subdued">5 Comments</a>
-    </p>
-  </div>
 
-  <div class="item tabs tabs-secondary tabs-icon-left">
-    <a class="tab-item" href="#">
-      <i class="icon ion-thumbsup"></i>
-      Like
-    </a>
-    <a class="tab-item" href="#">
-      <i class="icon ion-chatbox"></i>
-      Comment
-    </a>
-    <a class="tab-item" href="#">
-      <i class="icon ion-share"></i>
-      Share
-    </a>
   </div>
-
 </div>
 
   </ion-content>
