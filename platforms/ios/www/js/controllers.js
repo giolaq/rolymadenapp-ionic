@@ -29,18 +29,16 @@ angular.module('starter.controllers', [])
       $scope.noData = false;
     }
 
-    for (var key in data) {
-      if (data.hasOwnProperty('eventi')) {
-          $scope.list.push(data['eventi']);
+    for ( var eventkey in data['eventi']) {
+      if (data['eventi'].hasOwnProperty(eventkey)) {
+          data['eventi'][eventkey].eventkey = eventkey;
+          $scope.eventslist.push(data['eventi'][eventkey]);
       }
     }
 
-
-
-
-
     $rootScope.hide();
   });
+
   // Create the login modal that we will use later
   $ionicModal.fromTemplateUrl('templates/login.html', {
     scope: $scope

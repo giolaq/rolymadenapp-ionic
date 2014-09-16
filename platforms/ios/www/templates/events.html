@@ -8,26 +8,16 @@
 
 <div  class="item item-body" ng-repeat="item in eventslist" id="{{item.key}}" >
 
-      {{ item.item }}
+      {{ item.nome }}
+
+      <p>
+      {{ item.data }}
+      </p>
 
     <p>
-      <a href="#" class="subdued">5 Comments</a>
+      <a href="#" class="subdued">{{ item.testo }}</a>
     </p>
   </div>
-
-  <div class="item tabs tabs-secondary tabs-icon-left">
-    <a class="tab-item" href="#">
-      <i class="icon ion-thumbsup"></i>
-      Like
-    </a>
-    <a class="tab-item" href="#">
-      <i class="icon ion-chatbox"></i>
-      Comment
-    </a>
-    <a class="tab-item" href="#">
-      <i class="icon ion-share"></i>
-      Share
-    </a>
   </div>
 
 </div>
