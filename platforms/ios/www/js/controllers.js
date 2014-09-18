@@ -66,6 +66,14 @@ angular.module('starter.controllers', [])
       $scope.closeLogin();
     }, 1000);
   };
+
+
+  if(typeof analytics !== "undefined") { analytics.trackView("Awesome Controller"); }
+
+    $scope.initEvent = function() {
+        if(typeof analytics !== "undefined") { analytics.debugMode(); analytics.trackEvent("Category", "Action", "Label", 25); }
+    }
+
 })
 
 .controller('PlaylistsCtrl', function($scope) {
@@ -80,12 +88,4 @@ angular.module('starter.controllers', [])
 })
 
 .controller('PlaylistCtrl', function($scope, $stateParams) {
-})
-
-.controller('AwesomeController', function($scope) {
-    if(typeof analytics !== "undefined") { analytics.trackView("Awesome Controller"); }
-
-    $scope.initEvent = function() {
-        if(typeof analytics !== "undefined") { analytics.trackEvent("Category", "Action", "Label", 25); }
-    }
 })
